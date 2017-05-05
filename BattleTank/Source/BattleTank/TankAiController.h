@@ -7,13 +7,16 @@
 #include "TankAiController.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class BATTLETANK_API ATankAiController : public AAIController
 {
-	GENERATED_BODY()
-	
+    GENERATED_BODY()
+
+public:
+    void Tick(float deltaSeconds) override;
+
 private:
     void BeginPlay() override;
     ATank * GetControlledTank() const;
